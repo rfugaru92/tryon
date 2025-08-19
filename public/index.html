@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Runware Flow UI</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Arial; margin: 24px; }
+      .box { border: 2px dashed #ccc; padding: 24px; border-radius: 8px; }
+      .row { display:flex; gap:12px; margin-top:12px; }
+      img.preview { max-width: 200px; max-height: 200px; object-fit: contain; border:1px solid #ddd; }
+      #result img { max-width: 400px; display:block; margin-top:12px; }
+    </style>
+  </head>
+  <body>
+    <h1>Runware testFlow UI</h1>
+    <p>Upload two images: <strong>in1</strong> (reference) and <strong>in2</strong> (base). Then press Run.</p>
+
+    <div class="box">
+      <form id="uploadForm">
+        <div>
+          <label>in1 (reference): <input type="file" name="in1" id="in1" accept="image/*" required></label>
+          <img id="p1" class="preview" src="" alt="" />
+        </div>
+        <div style="margin-top:8px">
+          <label>in2 (base): <input type="file" name="in2" id="in2" accept="image/*" required></label>
+          <img id="p2" class="preview" src="" alt="" />
+        </div>
+
+        <div class="row">
+          <button type="submit">Run</button>
+          <button type="button" id="clear">Clear</button>
+          <div id="status" style="margin-left:12px"></div>
+        </div>
+      </form>
+
+      <div id="result"></div>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

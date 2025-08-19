@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Runware Clothing Tester",
+  "version": "0.1",
+  "description": "Select a clothing image on a page and send it to your local Runware server to apply to a predefined character.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}

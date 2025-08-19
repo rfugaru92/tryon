@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>body{font-family:Arial;padding:12px;width:320px}#server{width:100%}</style>
+  </head>
+  <body>
+    <h3>Runware Clothing Tester</h3>
+    <div>
+      <label>Server URL: <input id="server" value="http://localhost:3000" /></label>
+    </div>
+    <div style="margin-top:8px">
+      <button id="select">Select image on page</button>
+    </div>
+    <div style="margin-top:8px">
+      <label>
+        <input type="checkbox" id="autoToggle" /> Auto Try-on mode
+      </label>
+    </div>
+    <div style="margin-top:12px">
+      <strong>Status:</strong>
+      <div id="status">idle</div>
+      <div id="preview" style="margin-top:8px; display:none;">
+        <div><strong>Result:</strong></div>
+        <img id="resultImg" style="max-width:100%; border:1px solid #eee; border-radius:6px;" />
+        <div><a id="resultLink" href="#" target="_blank"></a></div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
